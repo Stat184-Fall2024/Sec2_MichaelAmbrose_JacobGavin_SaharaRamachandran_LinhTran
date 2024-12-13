@@ -33,11 +33,11 @@ ggplot(combinedEnergyData, aes(x = year, y = totalProduction, fill = category)) 
     vjust = -0.5,
     size = 3
   ) +
-  scale_fill_manual(values = c("Renewable" = "green", "Non-Renewable" = "red", "Net Production" = "blue")) +
+  scale_fill_manual(values = c("Renewable" = "#09a804", "Non-Renewable" = "#eac81f", "Net Production" = "#95bb00")) +
   scale_y_continuous(
-    limits = c(0, 4e+06),
-    breaks = seq(0, 4e+06, by = 1e+06),
-    labels = scales::label_scientific()
+    limits = c(0, 4000000),
+    breaks = seq(0, 4000000, by = 1000000),
+    labels = scales::comma_format() 
   ) +
   labs(
     title = "Energy Production by Category and Year (2016–2018)",

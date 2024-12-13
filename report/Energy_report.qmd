@@ -50,7 +50,17 @@ The CARE principles emphasize Collective Benefit by supporting renewable energy 
 
 ## 4. Data Wrangling and Cleaning 
 
-Explain any data wrangling or cleaning you had to do before performing the analysis (e.g., handling missing values, reformatting data). Briefly describe the tools used (e.g., R, Python, etc.) and methods used to clean the data. 
+To clean the data before it was ready for visualization, a few measures had to be taken, using dplyr and stringr packages in R. First, rows with a missing value in the 4th column were removed, as they were not suitable to be used for visualization. To make the countries easier to work with, a new column, "country" was created by removing all digits from the country codes, that way only the human readable part was left over. An additional check was performed, that will replace the value of "country" to NA if the length of the value was less than or equal to 1. Fills were then completed on rows without a country code, with the last non-NA value above it. Additionally, columns ...1, ...2, and ...14 through ...18 were removed from the data set, as they were considered extraneous.
+
+Then, the first column is selected for more cleaning. Digits are removed, the substring "of which: " is removed, and periods (".") are removed, and extra whitespace is removed.
+The data is then stepped through by blocks of 34 rows, corresponding to the start and end rows for each country. columns 1,2, and 3 are converted into rows, and new column ranges are computed.
+The last two rows are then removed, and a stats list is appended to each row.
+`glue` is then used to create an excel-style range from the row and column bounds. The column names are set to years, and rows are more narrowly filtered.
+
+
+
+
+Explain any data wrangling or cleaning you had to do before performing the analysis (e.g., handling missing values, reformatting data). Briefly describe the tools used (e.g., R, Python, etc.) and methods used to clean the data.
 
 ## 5. Exploratory Data Analysis (EDA) 
 

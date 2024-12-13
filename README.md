@@ -22,17 +22,17 @@ This project has several key dates that you need to be aware of.
 
 We present the guidelines as a checklist in this README. This means that your team can edit the copy of this README in your repo by placing an x inside of the square brackets at the start of each item (i.e., [x]). This will help your team keep track of what you've completed and what you have left to do.
 
-- [ ] Read through README
-- [ ] Find 1 or 2 other individuals who you want to work with and form a team. (NOTE: unless you have specifically been given permission to do so, __you may not work alone__.)
-- [ ] Create a repo using this template repo. Name your repo `Sec#_FP_Name1_Name2_Name3` where `Sec#` is your section of Stat184 (i.e., `Sec1`, `Sec2`, `Sec3`, or `Sec4`) and `Name#` is replaced with the names of each team member.
-  - [ ] The owner of the repo should be `Stat184-Fall2024`. 
-- [ ] Make sure that each team member has access to the repo.
-- [ ] Come up with a topic and set of research questions your team will explore.
-- [ ] Make a plan for your work. We suggested putting together your work plan by <mark>Wednesday, Dec. 4, 2024</mark>.
-- [ ] Locate appropriate data sources for your project.
-  - [ ] Your main data source may __not__ be one that we used in class nor be found in any R package.
-  - [ ] Supplementary data sources may come from anywhere.
-- [ ] Read in your data and perform any necessary data wrangling and cleaning.
+- [x] Read through README
+- [x] Find 1 or 2 other individuals who you want to work with and form a team. (NOTE: unless you have specifically been given permission to do so, __you may not work alone__.)
+- [x] Create a repo using this template repo. Name your repo `Sec#_FP_Name1_Name2_Name3` where `Sec#` is your section of Stat184 (i.e., `Sec1`, `Sec2`, `Sec3`, or `Sec4`) and `Name#` is replaced with the names of each team member.
+  - [x] The owner of the repo should be `Stat184-Fall2024`. 
+- [x] Make sure that each team member has access to the repo.
+- [x] Come up with a topic and set of research questions your team will explore.
+- [x] Make a plan for your work. We suggested putting together your work plan by <mark>Wednesday, Dec. 4, 2024</mark>.
+- [x] Locate appropriate data sources for your project.
+  - [x] Your main data source may __not__ be one that we used in class nor be found in any R package.
+  - [x] Supplementary data sources may come from anywhere.
+- [x] Read in your data and perform any necessary data wrangling and cleaning.
 - [ ] Conduct Exploratory Data Analysis.
 - [ ] Prepare a reproducible report.
   - [ ] Use a QMD file; the output type is PDF.

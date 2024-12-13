@@ -3,7 +3,7 @@ title: "European Wind and Renewable Energy Trends (2016-2018)"
 
 subtitle: "Stat 184"
 
-author: "Akhilesh Nimse, Jacob Cohen, Linh Tran, Fateenah Farid"
+author: "Jacob Gavin, Michael Ambrose, Sahara Ramachandran, Linh Tran, Yuv Boghani"
 
 format: pdf
 

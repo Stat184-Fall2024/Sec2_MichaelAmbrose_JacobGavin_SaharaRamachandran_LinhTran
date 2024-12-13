@@ -1,5 +1,6 @@
 # Stat 184 Final Project--Fall 2024
 
+Jacob Gavin
 This repo will serve as the template file for the course project. Further, this README file contains the project guidelines as a checklist, key dates to be aware of, the list of learning outcomes being assessed with this project, and a few suggestions. Be sure to read through all portions of the README carefully.
 
 ## Project Purpose

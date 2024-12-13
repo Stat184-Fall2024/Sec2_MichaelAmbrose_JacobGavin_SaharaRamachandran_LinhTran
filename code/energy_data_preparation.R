@@ -8,8 +8,6 @@ library(glue)
 raw_code <- countrycode::codelist %>% 
   select(country_name = country.name.en, country = eurostat)
 
-setwd("C:/Users/linht/Downloads")
-
 # Use relative path
 file_path <- "data/Electricity_generation_statistics_2019.xlsx"
 raw_excel <- read_excel(file_path, sheet = 3)

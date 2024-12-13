@@ -16,7 +16,8 @@ totalNetProduction <- country_totals %>%
   )
 
 # Plot Total Net Energy Production ----
-ggplot(data = totalNetProduction, aes(x = year, y = totalProduction, group = 1)) +
+ggplot(data = totalNetProduction)+
+  aes(x = year, y = totalProduction, group = 1) +
   geom_line(
     color = "forestgreen",  
     size = 1.2       

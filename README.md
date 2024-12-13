@@ -43,17 +43,17 @@ We present the guidelines as a checklist in this README. This means that your te
       ```{r codeAppend, ref.label=knitr::all_labels(), echo=TRUE, eval=FALSE}
       ```
 ````
-  - [ ] State your research questions and explain them.
-  - [ ] Describe the provenance of your data. That is, where did you get the data, who collected the data, for what purpose, who/what make up the cases.
-  - [ ] Explain how your data meet the FAIR and/or CARE Principles.
-  - [ ] Describe what attributes you'll focus your analysis on (mention if they are part of your data sets or if you created them out of your data sets).
+  - [x] State your research questions and explain them.
+  - [x] Describe the provenance of your data. That is, where did you get the data, who collected the data, for what purpose, who/what make up the cases.
+  - [x] Explain how your data meet the FAIR and/or CARE Principles.
+  - [x] Describe what attributes you'll focus your analysis on (mention if they are part of your data sets or if you created them out of your data sets).
   - [ ] Create multiple data visualizations (tables and figures) that assist both the team and readers in understanding the data.
-    - [ ] Data visualizations should show a variety of your skills and geometries.
-    - [ ] __Optional__: If your research question/data make sense to do so, try creating a map.
-    - [ ] Data visualizations should be appropriately sized--not too small and not too big.
-    - [ ] Figures and Tables should have appropriate captions and appropriately cross-referenced in the body of your report.
+    - [x] Data visualizations should show a variety of your skills and geometries.
+    - [x] __Optional__: If your research question/data make sense to do so, try creating a map.
+    - [x] Data visualizations should be appropriately sized--not too small and not too big.
+    - [x] Figures and Tables should have appropriate captions and appropriately cross-referenced in the body of your report.
     - [ ] Your team must produce at least one table that is *not* a display of raw data.
-    - [ ] Your team must produce at least one plot/graph.
+    - [x] Your team must produce at least one plot/graph.
     - [ ] There should be narrative text helping readers to better understand what the visualization helps them to learn about the data and context.
   - [ ] Your report should narrative text (beyond explaining tables and figures) that explains the context and helps the reader make sense of what is going on.
   - [ ] __Optional:__ For those who want to challenge themselves further, feel free to include a section on using other statistical methods such as hypothesis testing, regression, ANOVA, or machine learning--see Chapter 18 of the Data Computing eBook.
@@ -63,12 +63,12 @@ We present the guidelines as a checklist in this README. This means that your te
   - [ ] Each team member must have at least two (2) commits in the repo's history.
   - [ ] There should be at must be at least one Pull Request that resulted in a successful merging of two branches.
   - [ ] One team member should create the Pull Request while a *different* team member should review and complete the Pull Request.
-  - [ ] Ensure that your instructor has access to your repo.
+  - [x] Ensure that your instructor has access to your repo.
   - [ ] __Optional:__ Use the repo's Issues system to track and address any problems, core tasks, etc. 
 - [ ] All code should be written according to a Style Guide of your choice. List this Style Guide as a code comment in your first code chunk.
   - __Possible Style Guides:__ There are several different coding Style Guides you can follow; here are a few. [The BOAST Style Guide](https://educationshinyappteam.github.io/Style_Guide/coding.html), [The Tidyverse Style Guide](https://style.tidyverse.org/), [Google's R Style Guide](https://google.github.io/styleguide/Rguide.html)
-- [ ] Sign up for your Work-in-Progress Presentation
-- [ ] Complete your Work-in-Progress Presentation (details below)
+- [x] Sign up for your Work-in-Progress Presentation
+- [x] Complete your Work-in-Progress Presentation (details below)
 - [ ] Finalize your work and submit your report as a __PDF__ to the appropriate submission portal in Canvas by the deadline.
   - [ ] As a comment on your submission, include a link to your team's project repo.
 - [ ] Each team member must complete their own copy of the Self & Peer Evaluations QMD file and upload the rendered file (HTML, PDF, or Word) to the appropriate submission portal in Canvas by the deadline.

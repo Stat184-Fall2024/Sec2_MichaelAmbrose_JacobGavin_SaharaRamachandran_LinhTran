@@ -1,0 +1,83 @@
+---
+title: "European Wind and Renewable Energy Trends (2016-2018)"
+
+subtitle: "Stat 184"
+
+author: "Akhilesh Nimse, Jacob Cohen, Linh Tran, Fateenah Farid"
+
+format: pdf
+
+editor: visual
+---
+
+# Analyzing European Energy Production: Wind, Renewable, and Fossil Fuels (2016-2018)
+
+## 1. Introduction
+
+In recent years, there has been a significant shift in the European Union's (EU) energy landscape, driven by efforts to reduce carbon emissions and transition towards more sustainable energy sources. The EU has increasingly focused on expanding renewable energy, such as wind, solar, and hydro, while gradually decreasing its reliance on fossil fuels. This shift is evident in the energy production data from 2016 to 2018, sourced from Eurostat, which tracks energy generation across various sources including conventional thermal, nuclear, hydro, wind, solar, and geothermal energy.
+
+Our project aims to explore these changes in the EU's energy production between 2016 and 2018, identifying key trends and understanding how the energy mix is evolving. Specifically, we focus on how the growth of renewable energy sources, such as wind and solar, has impacted the overall energy supply and the contributions of traditional energy sources. By analyzing this data, we aim to answer questions about the sustainability and resilience of the EU’s energy sector, the role of different energy sources in meeting demand, and the challenges and opportunities that lie ahead in the transition to cleaner energy.
+
+## 2. Research Questions
+
+1\. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ? (Bar chart)
+
+2\. What is the proportion of energy production for the European countries in 2018? (Pie chart)
+
+3\. How have renewable energy trends changed over time (2016–2018) for European countries? (Line chart)
+
+## 3. Data Description and Provenance
+
+The dataset was sourced from Eurostat, the statistical office of the European Union, which collects and provides comprehensive and standardized data for EU member countries. Eurostat aims to support evidence-based policymaking and research across Europe. This dataset focuses on energy production trends, examining renewable and non-renewable energy sources, as well as cross-border energy flows.
+
+The dataset contains energy production data for European countries from 2016 to 2018, classified by energy sources such as wind, nuclear, solar, and thermal. It provides a basis for examining energy sustainability, shaping policy decisions, and understanding the transition to renewable energy.
+
+Data Dictionary:
+
+-   country: Two-letter ISO code for the country
+
+-   country_name: Full name of the country
+
+-   type: Energy production source
+
+-   2016, 2017, 2018: Annual energy production data in Gigawatt hours (GWh)
+
+-   net_production, imports, exports: Metrics on total production and cross-border energy flow
+
+The FAIR principles ensure that this dataset is Findable through its clear documentation and structured format from Eurostat. It is Accessible in open formats like .csv and .xlsx, ensuring compatibility with tools like R and Python. The use of standardized units (e.g., Gigawatt hours) and ISO country codes ensures Interoperability across platforms, while its consistent formatting and clear variable descriptions make it Reusable for various analysis, including energy sustainability research.
+
+The CARE principles emphasize Collective Benefit by supporting renewable energy policies that address climate change. Authority to Control is respected by following Eurostat’s guidelines on data use, ensuring ethical and responsible sharing. The dataset promotes Responsibility and Ethics by fostering transparency and sustainable energy practices, benefiting society as a whole.
+
+## 4. Data Wrangling and Cleaning 
+
+Explain any data wrangling or cleaning you had to do before performing the analysis (e.g., handling missing values, reformatting data). Briefly describe the tools used (e.g., R, Python, etc.) and methods used to clean the data. 
+
+## 5. Exploratory Data Analysis (EDA) 
+
+Provide an overview of the main insights you found from the data. Include multiple visualizations (e.g., graphs, tables, maps) to help explain the data. Ensure to include a table that summarizes key statistics, and at least one graph/plot. Explain each visualization in the narrative (e.g., what trends the graph shows, what the table tells us about the data). Optional: Create a map if it adds value to your analysis. 
+
+## 6. Analysis of Research Questions 
+
+Discuss how your data addresses each research question. Analyze the results with the help of the visualizations and any relevant statistics. Use narrative text to provide context and explain what the visualizations reveal about the data. 
+
+## 7. Additional Analysis (Optional) 
+
+If applicable, apply more advanced statistical methods (e.g., hypothesis testing, regression analysis, ANOVA) to provide further insights. Mention any trends or anomalies discovered in the data and discuss their implications. 
+
+## 8. Conclusion 
+
+Summarize the findings from your analysis. Answer each research question based on the results. Discuss any limitations in your analysis and suggest areas for future research or analysis. 
+
+## 9. References 
+
+<https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Archive:Electricity_generation_statistics_%E2%80%93_first_results>
+
+<https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-08-04/Electricity_generation_statistics_2019.xlsx>
+
+<https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-08-04/readme.md>
+
+Cite any sources used in your report (data, articles, books) following your chosen citation style (e.g., APA7, MLA9). If you are using data from an external source like Eurostat or OECD, make sure to properly cite these sources. 
+
+## 10. Appendix: Code 
+
+Include an appendix where all code used for the analysis is placed. Code should be included in the appendix only and should not be mixed in the main body of the report. Include a code style guide at the top of the code section.

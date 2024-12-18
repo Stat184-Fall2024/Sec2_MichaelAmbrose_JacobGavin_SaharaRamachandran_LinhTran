@@ -1,20 +1,20 @@
-# Load Required Libraries ----
+# Load Required Libraries 
 library(tidyverse)
 library(readxl)
 library(countrycode)
 library(glue)
 
-# Read Raw Data ----
+# Read Raw Data 
 raw_code <- countrycode::codelist %>% 
-  select(country_name = country.name.en, country = eurostat)
+  select(country_name = country.name.en, country = eurostat) # Map country names and Eurostat codes
 
 # Use relative path
 file_path <- "data/Electricity_generation_statistics_2019.xlsx"
 raw_excel <- read_excel(file_path, sheet = 3)
 
-# Clean and Transform Data ----
+# Clean and Transform Data 
 raw_excel_clean <- raw_excel %>% 
-  filter(!is.na(...4)) %>% 
+  filter(!is.na(...4)) %>%  # Keep valid rows with country data
   mutate(
     country = str_remove_all(...4, "[:digit:]"), 
     .before = ...1
@@ -27,10 +27,10 @@ raw_excel_clean <- raw_excel %>%
     ),
     country = str_extract(country, "[:alpha:]+")
   ) %>% 
-  fill(country) %>% 
-  select(-c(...1, ...2, ...14:...18))
+  fill(country) %>% # Fill down country names
+  select(-c(...1, ...2, ...14:...18)) # Remove irrelevant columns
 
-# Prepare Row Statistics ----
+# Prepare Row Statistics 
 row_stat <- read_excel(
   path = file_path, 
   sheet = 3,
@@ -42,7 +42,7 @@ row_stat <- read_excel(
   str_remove("\\.") %>% 
   str_trim()
 
-# Create Country Range ----
+# Create Country Range 
 country_range <- tibble(
   row_start = seq(from = 46, to = 454, by = 34), 
   row_end = seq(from = 61, to = 469, by = 34)
@@ -59,24 +59,24 @@ country_range <- tibble(
   ) %>% 
   mutate(col_end = col_start + 2) %>% 
   select(-col_var) %>% 
-  slice(-n(), -(n() - 1)) %>% 
+  slice(-n(), -(n() - 1)) %>% # Remove extra rows
   mutate(row_stat = list(row_stat))
 
-# Define Supporting Functions ----
+# Define Supporting Functions 
 get_country_stats <- function(row_start, row_end, col_start, col_end, row_stat) {
-  col_range <- glue("{LETTERS[col_start]}{row_start}:{LETTERS[col_end]}{row_end}")
+  col_range <- glue("{LETTERS[col_start]}{row_start}:{LETTERS[col_end]}{row_end}") # Define range
   raw_data <- suppressMessages(read_excel(
     file_path, sheet = 3, col_names = FALSE, range = col_range
   ))
   country_data <- raw_data %>% 
-    set_names(nm = c(2016:2018)) %>% 
+    set_names(nm = c(2016:2018)) %>% # Assign column names for years
     filter(!is.na(`2016`), `2016` != "2016") %>% 
     mutate(
       country = if_else(
         is.na(`2017`), 
         `2016`, 
         NA_character_
-      ), 
+      ), # Extract country names
       .before = `2016`
     ) %>% 
     fill(country) %>% 
@@ -92,15 +92,15 @@ get_country_stats <- function(row_start, row_end, col_start, col_end, row_stat) 
   return(country_data)
 }
 
-# Calculate Summary Tables ----
+# Calculate Summary Tables 
 all_countries <- country_range %>% 
   pmap_dfr(get_country_stats) %>% 
-  left_join(raw_code, by = "country") %>% 
+  left_join(raw_code, by = "country") %>% # Add country names
   select(country, country_name, everything())
 
 country_totals <- all_countries %>% filter(level == "Total")
 energy_types <- all_countries %>% filter(level != "Total")
 
-# Save to CSV ----
+# Save to CSV 
 write.csv(country_totals, "data/country_totals.csv", row.names = FALSE)
 write.csv(energy_types, "data/energy_types.csv", row.names = FALSE)

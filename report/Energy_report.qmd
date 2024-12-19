@@ -3,7 +3,8 @@ title: "European Wind and Renewable Energy Trends (2016-2018)"
 
 subtitle: "Stat 184"
 
-author: "Jacob Gavin, Michael Ambrose, Sahana Ramachandran, Linh Tran, Yuv Boghani"
+author: "Jacob Gavin, Sahara Ramachandran, Linh Tran, Yuv Boghani"
+
 
 format: pdf
 
@@ -14,25 +15,16 @@ editor: visual
 
 ## 1. Introduction
 
-In recent years, there has been a significant shift in the European Union's (EU)
-energy landscape, driven by efforts to reduce carbon emissions and transition 
-towards more sustainable energy sources. The EU has increasingly focused on 
-expanding renewable energy, such as wind, solar, and hydro, while gradually 
-decreasing its reliance on fossil fuels. This shift is evident in the energy 
-production data from 2016 to 2018, sourced from Eurostat, which tracks energy 
-generation across various sources including conventional thermal, nuclear, 
-hydro, wind, solar, and geothermal energy.
+In recent years, there has been a significant shift in the European Union's (EU) energy landscape, driven by efforts to reduce carbon emissions and transition towards more sustainable energy sources. The EU has increasingly focused on expanding renewable energy, such as wind, solar, and hydro, while gradually decreasing its reliance on fossil fuels. This shift is evident in the energy production data from 2016 to 2018, sourced from Eurostat, which tracks energy generation across various sources including conventional thermal, nuclear, hydro, wind, solar, and geothermal energy.
 
-Our project aims to explore these changes in the EU's energy production between 
-2016 and 2018, identifying key trends and understanding how the energy mix is 
-evolving. Specifically, we focus on how the growth of renewable energy sources, 
-such as wind and solar, has impacted the overall energy supply and the 
-contributions of traditional energy sources. By analyzing this data, we aim to 
-answer questions about the sustainability and resilience of the EU’s energy 
-sector, the role of different energy sources in meeting demand, and the 
-challenges and opportunities that lie ahead in the transition to cleaner energy.
+Our project aims to explore these changes in the EU's energy production between 2016 and 2018, identifying key trends and understanding how the energy mix is evolving. 
+
+Specifically, we focus on how the growth of renewable energy sources, such as wind and solar, has impacted the overall energy supply and the contributions of traditional energy sources.
+
+By analyzing this data, we aim to answer questions about the sustainability and resilience of the EU’s energy sector, the role of different energy sources in meeting demand, and the challenges and opportunities that lie ahead in the transition to cleaner energy.
 
 ## 2. Research Questions
+
 
 1\. How much do the two sources of energy (renewable and non-renewable) contribute to net production in the EU across 2016-18?
 
@@ -44,19 +36,14 @@ challenges and opportunities that lie ahead in the transition to cleaner energy.
 
 5\.  How did the total renewable energy production and imports impact an EU country's net trade balance in 2018?
 
+
 ## 3. Data Description and Provenance
 
-The dataset was sourced from Eurostat, the statistical office of the European
-Union, which collects and provides comprehensive and standardized data for EU 
-member countries. Eurostat aims to support evidence-based policymaking and 
-research across Europe. This dataset focuses on energy production trends, 
-examining renewable and non-renewable energy sources, as well as cross-border 
-energy flows.
+The dataset was sourced from Eurostat, the statistical office of the European Union, which collects and provides comprehensive and standardized data for EU member countries.
 
-The dataset contains energy production data for European countries from 2016 to 
-2018, classified by energy sources such as wind, nuclear, solar, and thermal. 
-It provides a basis for examining energy sustainability, shaping policy 
-decisions, and understanding the transition to renewable energy.
+Eurostat aims to support evidence-based policymaking and research across Europe. This dataset focuses on energy production trends, examining renewable and non-renewable energy sources, as well as cross-border energy flows.
+
+The dataset contains energy production data for European countries from 2016 to 2018, classified by energy sources such as wind, nuclear, solar, and thermal. It provides a basis for examining energy sustainability, shaping policy decisions, and understanding the transition to renewable energy.
 
 Data Dictionary:
 
@@ -68,27 +55,42 @@ Data Dictionary:
 
 -   2016, 2017, 2018: Annual energy production data in Gigawatt hours (GWh)
 
--   net_production, imports, exports: Metrics on total production and 
-cross-border energy flow
+-   net_production, imports, exports: Metrics on total production and cross-border energy flow
 
-The FAIR principles ensure that this dataset is Findable through its clear documentation and structured format from Eurostat. It is Accessible in open formats like .csv and .xlsx, ensuring compatibility with tools like R and Python. The use of standardized units (e.g., Gigawatt hours) and ISO country codes ensures Interoperability across platforms, while its consistent formatting and clear variable descriptions make it Reusable for various analysis, including energy sustainability research.
+The FAIR principles ensure that this dataset is Findable through its clear documentation and structured format from Eurostat. It is Accessible in open formats like .csv and .xlsx, ensuring compatibility with tools like R and Python. 
 
-The CARE principles emphasize Collective Benefit by supporting renewable energy policies that address climate change. Authority to Control is respected by following Eurostat’s guidelines on data use, ensuring ethical and responsible sharing. The dataset promotes Responsibility and Ethics by fostering transparency and sustainable energy practices, benefiting society as a whole.
+The use of standardized units (e.g., Gigawatt hours) and ISO country codes ensures Interoperability across platforms, while its consistent formatting and clear variable descriptions make it Reusable for various analysis, including energy sustainability research.
+
+The CARE principles emphasize Collective Benefit by supporting renewable energy policies that address climate change. Authority to Control is respected by following Eurostat’s guidelines on data use, ensuring ethical and responsible sharing. 
+
+The dataset promotes Responsibility and Ethics by fostering transparency and sustainable energy practices, benefiting society as a whole.
+
+To conclude this section, future data colleciton could include extending the dataset to include more recent years, or tracking other variables, such as greenhouse gas emissions. 
+
+This would provide a more holistic view of which countries are "net zero" in terms of emissions. By integrating the data we might be able to gain a better insight into the effectiveness of renewable energy initiatives, and locate where countries need to improve their efforts. 
+
+In addition, a comparative analysis between EU and non-EU countries could also be useful in tracking how the continent as a whole is doing compared to other areas of the world.
 
 ## 4. Data Wrangling and Cleaning 
 
+
 To clean the data before it was ready for visualization, a few measures had to be taken, using `dplyr` and `stringr` packages in R. First, rows with a missing value in the 4th column were removed, as they were not suitable to be used for visualization. To make the countries easier to work with, a new column, "country" was created by removing all digits from the country codes, that way only the human readable part was left over. An additional check was performed, that will replace the value of "country" to NA if the length of the value was less than or equal to 1. Fills were then completed on rows without a country code, with the last non-NA value above it. Additionally, columns ...1, ...2, and ...14 through ...18 were removed from the data set, as they were considered extraneous.
 
-Then, the first column is selected for more cleaning. Digits are removed, the substring "of which: " is removed, and periods (".") are removed, and extra whitespace is removed. The data is then stepped through by blocks of 34 rows, corresponding to the start and end rows for each country. columns 1,2, and 3 are converted into rows, and new column ranges are computed. The last two rows are then removed, and a stats list is appended to each row. `glue` is then used to create an excel-style range from the row and column bounds. The column names are set to years, and rows are more narrowly filtered.
 
-The data was structured in a way that adhered to the TIDY principles covered in
-class, with one atomic record in a single row. this allowed analysis to be done
-
-      
+First, rows with a missing value in the 4th column were removed, as they were not suitable to be used for visualization. To make the countries easier to work with, a new column, "country" was created by removing all digits from the country codes, that way only the human readable part was left over. 
 
 
+An additional check was performed, that will replace the value of "country" to NA if the length of the value was less than or equal to 1. Fills were then completed on rows without a country code, with the last non-NA value above it. Additionally, columns ...1, ...2, and ...14 through ...18 were removed from the data set, as they were considered extraneous.
 
-## 5. Exploratory Data Analysis (EDA) 
+
+Then, the first column is selected for more cleaning. Digits are removed, the substring "of which: " is removed, and periods (".") are removed, and extra whitespace is removed. 
+
+
+The data is then stepped through by blocks of 34 rows, corresponding to the start and end rows for each country. columns 1,2, and 3 are converted into rows, and new column ranges are computed. 
+
+The last two rows are then removed, and a stats list is appended to each row. `glue` is then used to create an excel-style range from the row and column bounds. The column names are set to years, and rows are more narrowly filtered.
+
+The data was structured in a way that adhered to the TIDY principles covered in class, with one atomic record in a single row. this allowed analysis to be done
 
 The original data set was composed of multiple tables, one for each country in the European Union that was being tracked. An example of one such table tracking UK energy production can be seen below.
 
@@ -110,13 +112,141 @@ The original data set was composed of multiple tables, one for each country in t
 | Pump eng. Absorbed   | 4,014   | 3,859   | 3,391   | -3.9%     | -12.1%    |
 | Energy Supplied      | 338,005 | 334,340 | 333,092 | -1.1%     | -0.4%     |
 
-Given that this data is quite compartmentalized, it makes sense to move the data
-into a format that is more easy to operate on, which is how we ended up with the
-two new csv data sets.
+Given that this data is quite compartmentalized, it makes sense to move the data into a format that is more easy to operate on, which is how we ended up with the two new csv data sets. 
 
-% Image underneath
+Moving the data into multiple files allows us to manipulate it with more precision. Ensuring that when performing analysis, we do not have to sift through and filter rows that are not applicable to the research question that we are trying to answer. 
 
-\% Summary table will go here
+Below are shown the heads of the two "new" csv files that were made from data derived from the original Excel file.
+
+
+Data set 1, (country_totals.csv)
+```{R, echo=FALSE}
+
+data <- read.csv('../data/country_totals.csv')
+head(data, n = 10)
+
+```         
+
+
+Data set 2, (energy_types.csv)
+```{R, echo=FALSE}
+
+data <- read.csv('../data/energy_types.csv')
+head(data, n=10)
+```
+
+## 5. Exploratory Data Analysis (EDA) 
+
+Below is Summary Statistics for Conventional Thermal Energy Production a for Energy Types produced in the years 2016, 2017, and 2018
+
+```{R, echo=FALSE}
+# Load necessary libraries
+library(knitr)
+library(dplyr)
+library(gt)
+
+# Read the data
+data <- read.csv("../data/energy_types.csv")
+
+# Filter for 'Conventional thermal' type (modify as needed for other energy types)
+filtered_data <- data %>% filter(type == "Conventional thermal")
+
+# Ensure column names are treated correctly
+colnames(filtered_data) <- make.names(colnames(filtered_data))
+
+# Compute summary statistics for each year individually
+summary_2016 <- summary(filtered_data$X2016, na.rm = TRUE)
+summary_2017 <- summary(filtered_data$X2017, na.rm = TRUE)
+summary_2018 <- summary(filtered_data$X2018, na.rm = TRUE)
+
+# Combine the summaries into a data frame
+summary_table <- data.frame(
+  Statistic = names(summary_2016),
+  Year_2016 = as.numeric(summary_2016),
+  Year_2017 = as.numeric(summary_2017),
+  Year_2018 = as.numeric(summary_2018)
+)
+
+# Print the summary table
+#kable(summary_table, caption = "Summary Statistics for Conventional Thermal Energy Production")
+print(summary_table)
+```
+
+This allows us to get a broad overview of what the landscape of energy production is like in the EU for the years specified.
+
+
+In addition, below is a summary table for Total energy produced in the years 2016, 2017, and 2018
+
+```{R, echo=FALSE}
+# Load necessary library
+library(knitr)
+library(dplyr)
+library(gt)
+
+# Read the data
+data <- read.csv("../data/country_totals.csv")
+
+# Filter for 'Total net production' type
+filtered_data <- data %>% filter(type == "Total net production")
+
+# Ensure column names are treated correctly
+colnames(filtered_data) <- make.names(colnames(filtered_data))
+
+# Compute summary statistics for each year individually
+summary_2016 <- summary(filtered_data$X2016, na.rm = TRUE)
+summary_2017 <- summary(filtered_data$X2017, na.rm = TRUE)
+summary_2018 <- summary(filtered_data$X2018, na.rm = TRUE)
+
+# Combine the summaries into a data frame
+summary_table <- data.frame(
+  Statistic = names(summary_2016),
+  Year_2016 = as.numeric(summary_2016),
+  Year_2017 = as.numeric(summary_2017),
+  Year_2018 = as.numeric(summary_2018)
+)
+
+# Print the summary table
+#print(summary_table)
+#kable(summary_table, caption = "Summary Statistics for Energy Production")
+print(summary_table)
+
+# Create a gt table
+#summary_table %>%
+#  gt() %>%
+#  tab_header(
+#    title = "Summary Statistics for Energy Production",
+#    subtitle = "Years: 2016, 2017, 2018"
+#  ) %>%
+#  fmt_number(
+#    columns = c(Year_2016, Year_2017, Year_2018),
+#    decimals = 2
+#  )
+```
+
+
+This is yet another summary table that will allow us to get an overview of what energy production looks like in the EU, however this data set does not concern itself necessarily with the TYPE of energy produced, rather the net production, imports, and exports of a given country. This data lends itself more to the economic factors surrounding energy production, compared to the previous summary table, which is grouped by TYPES of energy produced
+
+Below is a summary of the most lucrative methods of energy production in the EU from 2016-2018
+
+![Energy Production Boxplot](../images/box_plot.png)
+
+As you can see, much of the data lies on the lower end of the boxplot, highlighting that there are a few "outliers" that account for vastly more energy production than even the rest of the top 1/4 producers. This is true for each of the three types of renewable energy being tracked.
+
+![Trade Balance Map](../images/net_trade_map.png) This color-coded map displays which countries in the EU contribute and benefit most from power sharing. At the top of the charts is France, and what looks to be the most reliant on outside energy is Italy. This visualization provides a purely visual insight into the way that power is distributed among countries, and which countries are "sucklers" on the European power grid.
+
+This visualization provides key insights into the steps that individual countries are taking towards self-sustaiment as well as moving towards renewable energy. Naturally the shift to renewable energy is something that will take quite some time, and data visualization like this will allow us to better track the progress of countries.
+
+![Energy Categories](../images/energy_category_years.png) Attached above is a bar chart of energy production across the years 2016-2018. You can see that there is an increase in renewable energy production across the three years, signifying more of an emphasis being placed on renewable energy. However, the visualization provides more insight than just that. The increase in renewable energy from 2016 to 2017 is a mere \~5,000 GWh, but the increase in renewable energy production from 2017 to 2018 is \~77,000 GWh. This shows that not onlt is there an increase in production of renewable energy, the rate at which countries are switching to renewable energy is ALSO increasing! This is good to see, that the switch to renewable energy is actually picking up steam. Early reports show that this trend is still being followed, although that data is outside of the scope of this report.
+
+![Renewable Trade Correlation](../images/corr_net_trade_energy.png) This is perhaps one of the most profound findings of the study. Although the coefficient of correlation is relatively weak, there is in fact a correlation between countries that generate enough power to have a surplus, and countries that produce more renewable energy. This has already taken into account the proportions of renewable vs total energy production. Naturally, this is not a purely causative relationship, as there are many other factors to take into account, such as GDP, Leadership, and other factors that may confound this correlation, but the data shows that countries that produce more renewable energy tend to have a surplus of energy, hinting at its effectiveness and necessity going forward in the journey to a more renewable power grid.
+
+
+![Energy Source Changes](../images/energy_trends.png)
+This is another very interesting visual. This graphic provides insight not only into the amount of each kind of energy being produced, but also highlights the ways in which their production is changing, such as the "geothermal / other" seeing a sharp uptick from 2017 to 2018, or the dip and recovery that was experienced by both nuclear and Hydro energy. While surely there are many many factors that influence how much of a certain power type is produced, this visual gives an insight into the short-term trends of the energy production types. That is to say, this gives us insight into the "What" but not necessarily the "Why"
+
+
+
+
 
 ```{R, echo=FALSE}
 library(dplyr)
@@ -134,20 +264,25 @@ summary_table <- data %>%
 
 print(summary_table)
 ```
-| Type of Energy        |  2016 Total     | 2017 Total    | 2018 Total  |
-|-----------------------|-----------------|---------------|-------------|
-| Conventional Thermal  | 1,801,451.654   | 1838783.375   | 1704429.420 |
-| Geothermal            | 10,281.953      | 11,394.997    | 12,443.754  |
-| Hydro (traditional)   | 631,263.647     | 564,249.938   | 611,993.531 |
-| Nuclear               | 871,560.205     | 866,211.980   | 868,333.983 |
-| Hydro (pumped)        | 32,889.277      | 33,443.817    | 50,153.928  |
-| Solar                 | 111,948.354     | 121,910.507   | 130,968.490 |
-| Wind                  | 318,809.583     | 379,964.520   | 401,332.380 |
-| Other                 | 5,670.308       | 5,692.438     | 8,109.144   |
+
+
+Below is shown a table of the totals of the energy produced through the years 2016-2018
+| Type of Energy       | 2016 Total    | 2017 Total  | 2018 Total  |
+|----------------------|---------------|-------------|-------------|
+| Conventional Thermal | 1,801,451.654 | 1838783.375 | 1704429.420 |
+| Geothermal           | 10,281.953    | 11,394.997  | 12,443.754  |
+| Hydro (traditional)  | 631,263.647   | 564,249.938 | 611,993.531 |
+| Nuclear              | 871,560.205   | 866,211.980 | 868,333.983 |
+| Hydro (pumped)       | 32,889.277    | 33,443.817  | 50,153.928  |
+| Solar                | 111,948.354   | 121,910.507 | 130,968.490 |
+| Wind                 | 318,809.583   | 379,964.520 | 401,332.380 |
+| Other                | 5,670.308     | 5,692.438   | 8,109.144   |
+
 
 
 
 ## 6. Analysis of Research Questions 
+
 
 
 #### 1. How much do the two sources of energy (renewable and non-renewable) contribute to net production in the EU across 2016-18?
@@ -221,26 +356,43 @@ The second scatterplot examines the relationship between net trade balance and i
 These visualizations emphasize both the critical role of renewable energy production in bolstering trade balance and the economic challenges posed by energy import dependency. They highlight the importance of policies promoting renewable energy production to enhance trade stability and reduce reliance on external energy sources.
 
 
+This is an important question to answer because it allows to get a better read into the energy "leadership" of a country, ie. which countries are "leading the charge" in energy production. This likely corresponds to bargaining power in the continental stage, as energy is one of the most important commodities for a country to have.
+
+
+
+Answering this question is key to gauging how close the European union is to it's sustainable energy goals. Regardless of actual renewable energy production, we are able to see the rate at which countries are making a shift to renewable energy, which serves as a marker of whether or not a country is on track to meet the goals set by and for them, in terms of renewable energy. This is especially important when considering how much of a push the EU is making towards renewable energy. Discuss how your data addresses each research question. Analyze the results with the help of the visualizations and any relevant statistics. Use narrative text to provide context and explain what the visualizations reveal about the data. 
 
 
 ## 7. Additional Analysis (Optional) 
 
-If applicable, apply more advanced statistical methods (e.g., hypothesis 
-testing, regression analysis, ANOVA) to provide further insights. Mention any 
-trends or anomalies discovered in the data and discuss their implications. 
+If applicable, apply more advanced statistical methods (e.g., hypothesis testing, regression analysis, ANOVA) to provide further insights. Mention any trends or anomalies discovered in the data and discuss their implications. 
 
 ## 8. Conclusion 
 
+The analysis of European energy production from 2016 to 2018 highlights a transformative shift towards renewable energy, driven by the European Union’s sustainability goals and the global urgency to reduce carbon emissions. While conventional thermal energy and nuclear power still dominate the overall energy mix, the rapid growth of wind and solar energy production signals a strong commitment to renewable sources. Wind energy, for eg, grew by 34.2% between 2016 and 2017, with an additional 13.8% increase from 2017 to 2018, reflecting significant investment in wind infrastructure. Solar energy production also demonstrated steady growth, rising by 10.7% and 11.6% year-over-year during the same period. This trend underscores the increasing focus on harnessing clean energy sources to transition towards a more sustainable and resilient energy system. However, this shift is not uniform across all member states, as larger economies like France and Germany continue to dominate energy production, creating a notable disparity in output across the EU.
+
+France’s heavy reliance on nuclear power and Germany’s diversified energy mix place these nations at the forefront of the EU’s energy landscape, while smaller or less industrialized countries contribute significantly less to the overall production. Such disparities emphasize the need for more balanced energy policies that promote investment in renewable energy infrastructure across all member states, particularly in underrepresented regions. Moreover, while the analysis provides valuable insights into energy production trends, it leaves out critical factors like consumption patterns and the socio-economic impacts of the energy transition, which are equally important in understanding the complete picture of Europe’s energy landscape. Moving forward, addressing regional inequalities and maintaining the momentum in renewable energy adoption will be essential to achieving a cohesive and sustainable energy future for the European Union.
+
+Research Questions:
+
+1.⁠ ⁠How have renewable energy trends evolved across European countries between 2016 and 2018?
+2.⁠ ⁠What factors contribute to the disparities in energy production across EU member states?
+
+Limitations:
+
+1.⁠ ⁠The analysis relies on Eurostat data, which may have reporting inconsistencies or gaps for certain countries.
+2.⁠ ⁠The study focuses on production data, leaving out consumption patterns or economic impacts of the energy transition.
 
 
-Summarize the findings from your analysis. Answer each research question based on the results. Discuss any limitations in your analysis and suggest areas for future research or analysis. 
+#### 1. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ?
+In 2018, total energy production varied substantially across European countries, largely depending on their resource availability, infrastructure, and policy focus. France, Germany, the United Kingdom, Italy, and Spain emerged as the top five energy producers, with France notably leading due to its extensive nuclear capacity and Germany following closely with a more diversified energy mix.
 
-#### 1\. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ?
+#### 2. What is the proportion of energy production for the European countries in 2018?
+The proportion of energy production was unevenly distributed, with a few large economies dominating the output. France held a significant share, followed by Germany, while other countries produced comparatively smaller proportions. Overall, a handful of major players accounted for the bulk of Europe’s total energy supply in 2018.
 
-#### 2\. What is the proportion of energy production for the European countries in 2018?
+#### 3. How have renewable energy trends changed over time (2016–2018) for European countries?
+Between 2016 and 2018, renewable energy production in Europe increased steadily, with wind and solar sources experiencing particularly strong growth. Not only did the volume of renewable energy rise, but the rate of growth also accelerated over this period, reflecting the EU’s strengthening commitment to reducing fossil fuel dependence and achieving sustainability targets.
 
-#### 3\. How have renewable energy trends changed over time (2016–2018) for European 
-countries?
 
 ## 9. References 
 

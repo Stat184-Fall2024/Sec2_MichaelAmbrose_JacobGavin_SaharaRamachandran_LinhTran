@@ -3,7 +3,7 @@ title: "European Wind and Renewable Energy Trends (2016-2018)"
 
 subtitle: "Stat 184"
 
-author: "Jacob Gavin, Michael Ambrose, Sahara Ramachandran, Linh Tran, Yuv Boghani"
+author: "Jacob Gavin, Sahara Ramachandran, Linh Tran, Yuv Boghani"
 
 format: pdf
 
@@ -20,11 +20,11 @@ Our project aims to explore these changes in the EU's energy production between 
 
 ## 2. Research Questions
 
-1\. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ? (Bar chart)
+#### 1\. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ? (Bar chart)
 
-2\. What is the proportion of energy production for the European countries in 2018? (Pie chart)
+#### 2\. What is the proportion of energy production for the European countries in 2018? (Pie chart)
 
-3\. How have renewable energy trends changed over time (2016–2018) for European countries? (Line chart)
+#### 3\. How have renewable energy trends changed over time (2016–2018) for European countries? (Line chart)
 
 ## 3. Data Description and Provenance
 
@@ -47,6 +47,8 @@ Data Dictionary:
 The FAIR principles ensure that this dataset is Findable through its clear documentation and structured format from Eurostat. It is Accessible in open formats like .csv and .xlsx, ensuring compatibility with tools like R and Python. The use of standardized units (e.g., Gigawatt hours) and ISO country codes ensures Interoperability across platforms, while its consistent formatting and clear variable descriptions make it Reusable for various analysis, including energy sustainability research.
 
 The CARE principles emphasize Collective Benefit by supporting renewable energy policies that address climate change. Authority to Control is respected by following Eurostat’s guidelines on data use, ensuring ethical and responsible sharing. The dataset promotes Responsibility and Ethics by fostering transparency and sustainable energy practices, benefiting society as a whole.
+
+To conclude this section, future data colleciton could include extending the dataset to include more recent years, or tracking other variables, such as greenhouse gas emissions. This would provide a more holistic view of which countries are "net zero" in terms of emissions. By integrating the data we might be able to gain a better insight into the effectiveness of renewable energy initiatives, and locate where countries need to improve their efforts. In addition, a comparitive analysis between EU and non-EU countries could also be useful in tracking how the continent as a whole is doing compared to other areas of the world.
 
 ## 4. Data Wrangling and Cleaning 
 
@@ -81,7 +83,7 @@ Given that this data is quite compartmentalized, it makes sense to move the data
 
 
 Data set 1, (country_totals.csv)
-```{R, echo=False}
+```{R, echo=FALSE}
 
 data <- read.csv('../data/country_totals.csv')
 head(data, n = 10)
@@ -99,7 +101,7 @@ head(data, n=10)
 
 
 
-\% Below is a summary table for Total energy produced in the years 2016, 2017, and 2018
+Below is a summary table for Total energy produced in the years 2016, 2017, and 2018
 
 ```{R, echo=FALSE}
 # Load necessary library
@@ -157,12 +159,12 @@ As you can see, much of the data lies on the lower end of the boxplot, highlight
 
 This visualization provides key insights into the steps that individual countries are taking towards self-sustaiment as well as moving towards renewable energy. Naturally the shift to renewable energy is something that will take quite some time, and data visualization like this will allow us to better track the progress of countries.
 
-![Energy Categories](../images/energy_category_bar) Attached above is a bar chart of energy production across the years 2016-2018. You can see that there is an increase in renewable energy production across the three years, signifying more of an emphasis being placed on renewable energy. However, the visualization provides more insight than just that. The increase in renewable energy from 2016 to 2017 is a mere \~5,000 GWh, but the increase in renewable energy production from 2017 to 2018 is \~77,000 GWh. This shows that not onlt is there an increase in production of renewable energy, the rate at which countries are switching to renewable energy is ALSO increasing! This is good to see, that the switch to renewable energy is actually picking up steam. Early reports show that this trend is still being followed, although that data is outside of the scope of this report.
+![Energy Categories](../images/energy_category_years.png) Attached above is a bar chart of energy production across the years 2016-2018. You can see that there is an increase in renewable energy production across the three years, signifying more of an emphasis being placed on renewable energy. However, the visualization provides more insight than just that. The increase in renewable energy from 2016 to 2017 is a mere \~5,000 GWh, but the increase in renewable energy production from 2017 to 2018 is \~77,000 GWh. This shows that not onlt is there an increase in production of renewable energy, the rate at which countries are switching to renewable energy is ALSO increasing! This is good to see, that the switch to renewable energy is actually picking up steam. Early reports show that this trend is still being followed, although that data is outside of the scope of this report.
 
 ![Renewable Trade Correlation](../images/corr_net_trade_energy.png) This is perhaps one of the most profound findings of the study. Although the coefficient of correlation is relatively weak, there is in fact a correlation between countries that generate enough power to have a surplus, and countries that produce more renewable energy. This has already taken into account the proportions of renewable vs total energy production. Naturally, this is not a purely causative relationship, as there are many other factors to take into account, such as GDP, Leadership, and other factors that may confound this correlation, but the data shows that countries that produce more renewable energy tend to have a surplus of energy, hinting at its effectiveness and necessity going forward in the journey to a more renewable power grid.
 
 
-![Energy Source Changes](../images/energy_source_changes_line.png)
+![Energy Source Changes](../images/energy_trends.png)
 This is another very interesting visual. This graphic provides insight not only into the amount of each kind of energy being produced, but also highlights the ways in which their production is changing, such as the "geothermal / other" seeing a sharp uptick from 2017 to 2018, or the dip and recovery that was experienced by both nuclear and Hydro energy. While surely there are many many factors that influence how much of a certain power type is produced, this visual gives an insight into the short-term trends of the energy production types. That is to say, this gives us insight into the "What" but not necessarily the "Why"
 
 

@@ -84,9 +84,7 @@ The original data set was composed of multiple tables, one for each country in t
 
 Given that this data is quite compartmentalized, it makes sense to move the data into a format that is more easy to operate on, which is how we ended up with the two new csv data sets.
 
-\% Image underneath
-
-\% Summary table will go here
+\% Below is a summary table for Total energy produced in the years 2016, 2017, and 2018
 
 ```{R, echo=FALSE}
 # Load necessary library
@@ -134,7 +132,27 @@ print(summary_table)
 #  )
 ```
 
-LOLOL
+Below is a summary of the most lucrative methods of energy production in the EU from 2016-2018
+
+![Energy Production Boxplot](../images/box_plot.png)
+
+As you can see, much of the data lies on the lower end of the boxplot, highlighting that there are a few "outliers" that account for vastly more energy production than even the rest of the top 1/4 producers. This is true for each of the three types of renewable energy being tracked.
+
+![Trade Balance Map](../images/net_trade_map.png) This color-coded map displays which countries in the EU contribute and benefit most from power sharing. At the top of the charts is France, and what looks to be the most reliant on outside energy is Italy. This visualization provides a purely visual insight into the way that power is distributed among countries, and which countries are "sucklers" on the European power grid.
+
+This visualization provides key insights into the steps that individual countries are taking towards self-sustaiment as well as moving towards renewable energy. Naturally the shift to renewable energy is something that will take quite some time, and data visualization like this will allow us to better track the progress of countries.
+
+![Energy Categories](../images/energy_category_bar) Attached above is a bar chart of energy production across the years 2016-2018. You can see that there is an increase in renewable energy production across the three years, signifying more of an emphasis being placed on renewable energy. However, the visualization provides more insight than just that. The increase in renewable energy from 2016 to 2017 is a mere \~5,000 GWh, but the increase in renewable energy production from 2017 to 2018 is \~77,000 GWh. This shows that not onlt is there an increase in production of renewable energy, the rate at which countries are switching to renewable energy is ALSO increasing! This is good to see, that the switch to renewable energy is actually picking up steam. Early reports show that this trend is still being followed, although that data is outside of the scope of this report.
+
+![Renewable Trade Correlation](../images/corr_net_trade_energy.png) This is perhaps one of the most profound findings of the study. Although the coefficient of correlation is relatively weak, there is in fact a correlation between countries that generate enough power to have a surplus, and countries that produce more renewable energy. This has already taken into account the proportions of renewable vs total energy production. Naturally, this is not a purely causative relationship, as there are many other factors to take into account, such as GDP, Leadership, and other factors that may confound this correlation, but the data shows that countries that produce more renewable energy tend to have a surplus of energy, hinting at its effectiveness and necessity going forward in the journey to a more renewable power grid.
+
+
+![Energy Source Changes](../images/energy_source_changes_line.png)
+This is another very interesting visual. This graphic provides insight not only into the amount of each kind of energy being produced, but also highlights the ways in which their production is changing, such as the "geothermal / other" seeing a sharp uptick from 2017 to 2018, or the dip and recovery that was experienced by both nuclear and Hydro energy. While surely there are many many factors that influence how much of a certain power type is produced, this visual gives an insight into the short-term trends of the energy production types. That is to say, this gives us insight into the "What" but not necessarily the "Why"
+
+
+
+Attached above
 
 ```{R, echo=FALSE}
 library(dplyr)

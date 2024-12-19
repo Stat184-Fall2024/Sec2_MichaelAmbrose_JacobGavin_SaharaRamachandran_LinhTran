@@ -3,7 +3,7 @@ title: "European Wind and Renewable Energy Trends (2016-2018)"
 
 subtitle: "Stat 184"
 
-author: "Jacob Gavin, Michael Ambrose, Sahara Ramachandran, Linh Tran, Yuv Boghani"
+author: "Jacob Gavin, Michael Ambrose, Sahana Ramachandran, Linh Tran, Yuv Boghani"
 
 format: pdf
 
@@ -76,18 +76,12 @@ The CARE principles emphasize Collective Benefit by supporting renewable energy 
 
 ## 4. Data Wrangling and Cleaning 
 
-<<<<<<< Updated upstream
 To clean the data before it was ready for visualization, a few measures had to be taken, using `dplyr` and `stringr` packages in R. First, rows with a missing value in the 4th column were removed, as they were not suitable to be used for visualization. To make the countries easier to work with, a new column, "country" was created by removing all digits from the country codes, that way only the human readable part was left over. An additional check was performed, that will replace the value of "country" to NA if the length of the value was less than or equal to 1. Fills were then completed on rows without a country code, with the last non-NA value above it. Additionally, columns ...1, ...2, and ...14 through ...18 were removed from the data set, as they were considered extraneous.
 
 Then, the first column is selected for more cleaning. Digits are removed, the substring "of which: " is removed, and periods (".") are removed, and extra whitespace is removed. The data is then stepped through by blocks of 34 rows, corresponding to the start and end rows for each country. columns 1,2, and 3 are converted into rows, and new column ranges are computed. The last two rows are then removed, and a stats list is appended to each row. `glue` is then used to create an excel-style range from the row and column bounds. The column names are set to years, and rows are more narrowly filtered.
 
 The data was structured in a way that adhered to the TIDY principles covered in
 class, with one atomic record in a single row. this allowed analysis to be done
-=======
-To clean the data before it was ready for visualization, a few measures had to be taken, using dplyr and stringr packages in R. First, rows with a missing value in the 4th column were removed, as they were not suitable to be used for visualization. To make the countries easier to work with, a new column, "country" was created by removing all digits from the country codes, that way only the human readable part was left over. An additional check was performed, that will replace the value of "country" to NA if the length of the value was less than or equal to 1. Fills were then completed on rows without a country code, with the last non-NA value above it. Additionally, columns ...1, ...2, and ...14 through ...18 were removed from the data set, as they were considered extraneous.
-
-Then, the first column is selected for more cleaning. Digits are removed, the substring "of which: " is removed, and periods (".") are removed, and extra whitespace is removed. The data is then stepped through by blocks of 34 rows, corresponding to the start and end rows for each country. columns 1,2, and 3 are converted into rows, and new column ranges are computed. The last two rows are then removed, and a stats list is appended to each row. `glue` is then used to create an excel-style range from the row and column bounds. The column names are set to years, and rows are more narrowly filtered.
->>>>>>> Stashed changes
 
 ```         
 Explain any data wrangling or cleaning you had to do before performing the analysis (e.g., handling missing values, reformatting data). Briefly describe the tools used (e.g., R, Python, etc.) and methods used to clean the data.
@@ -154,28 +148,53 @@ Provide an overview of the main insights you found from the data. Include multip
 
 ## 6. Analysis of Research Questions 
 
-#### 1. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ?
-
-Answering this question is important because it gives a better view of what 
-energy security in the European Union looks like. In the event of a disaster that takes out the energy production stations of a certain country, how tolerant is that country, as well as the rest of the european union, to the fluctuations in power availability that may occur? 
-#### 2. What is the proportion of energy production for the European countries in 2018?
-
-This is an important question to answer because it allows to get a better read
-into the energy "leadership" of a country, ie. which countries are "leading the
-charge" in energy production. This likely corresponds to bargaining power in the
-continental stage, as energy is one of the most important commodities for a
-country to have. 
 
 
-#### 3. How have renewable energy trends changed over time (2016–2018) for European countries? (Line chart)
+#### 1. How much do the two sources of energy contribute to net production in the EU across 2016-18?
 
-Answering this question is key to gauging how close the European union is to 
-it's sustainable energy goals. Regardless of actual renewable energy production,
-we are able to see the rate at which countries are making a shift to renewable
-energy, which serves as a marker of whether or not a country is on track to
-meet the goals set by and for them, in terms of renewable energy. This is 
-especially important when considering how much of a push the EU is making 
-towards renewable energy. 
+![Energy Production by Category and Year](../images/energy_category_years.png)
+
+Renewable energy production increased steadily from 1,072,304 GWh in 2016 to 1,156,738 GWh in 2018, 
+indicating a gradual shift toward sustainable sources. Non-renewable energy, while dominant, decreased slightly 
+from 2,711,571 GWh in 2016 to 2,630,936 GWh in 2018. This reflects their efforts to switch to greener sources of energy. 
+Net production remained relatively stable, with 3,751,480 GWh in 2016 and 3,737,693 GWh in 2018. 
+Non-renewable energy consistently contributed around 70-72% of total production, while renewable energy accounted for 
+approximately 28-30%. This shift shows progress in energy diversification driven by policy initiatives and advancements 
+in renewable technologies. However, the dominance of non-renewables reiterates ongoing challenges in fully transitioning 
+to sustainable energy production.
+
+####2. What are the trends and variations in energy production among different renewable sources over 2016-18?
+
+![Energy Trends By Source](../images/energy_trends.png)
+![Comparing Energy Production by Source](../images/box_plot.png)
+
+The data highlights the production trends and variations across renewable energy sources, namely hydro, solar, and wind. 
+The trends show a sharp fluctuation in hydro energy, starting above 620,000 GWh in 2016, with a drop to 580,000 GWh 
+in 2017, then rebounding by 2018. Solar energy shows steady growth, from approximately 115,000 GWh 
+in 2016 to around 130,000 GWh in 2018. There is also significant growth in wind energy production, starting from approximately 320,000 GWh 
+in 2016 and surpassing 400,000 GWh by 2018. The box plot further illustrates variability, showing that hydro has the highest
+production levels and variability, with some outliers. Wind follows in terms of production levels but exhibits more consistent 
+outputs. Solar remains the smallest contributor among the three despite consistent growth.
+These insights show a growing reliance on wind and solar energy, aligning with technological advancements and policy shifts 
+toward sustainable sources. Hydro, while the most substantial renewable energy source, demonstrates variability, 
+likely influenced by climatic factors like rainfall. Together, these trends highlight the importance of diversifying
+renewable energy sources to ensure consistent production levels.
+
+####3. What are the net trade balances for different countries in the EU as of 2018, and how do they compare geographically?
+
+![Net Trade Balances by Country](../images/net_trade_map.png)
+![Net Trade Balances- Geographic Distribution](../images/net_trade_country.png)
+
+The visualizations depict the net trade balances of renewable energy among EU countries in 2018. 
+The bar chart shows the trade balance in GWh for each country. France, Germany, and Sweden had the highest positive trade 
+balances, being significant exporters of renewable energy. Conversely, countries like Italy and Finland had the largest 
+negative balances, being heavily reliant on imports to meet energy demands. The map visualization provides a geographic 
+perspective, with green regions representing countries with an energy surplus and red regions indicating deficits. Particularly, 
+Western and Northern European countries, such as France, Germany, and Sweden, emerge as renewable energy hubs, while Southern 
+European countries, including Italy, appear to be more dependent on imports. This reflects the regional disparities in renewable energy
+production and consumption. These insights underline the interdependence among EU countries in renewable energy trade and indicate the
+collaborative energy strategies used to balance production and consumption.
+
 Discuss how your data addresses each research question. Analyze the results with the help of the visualizations and any relevant statistics. Use narrative text to provide context and explain what the visualizations reveal about the data. 
 
 ## 7. Additional Analysis (Optional) 

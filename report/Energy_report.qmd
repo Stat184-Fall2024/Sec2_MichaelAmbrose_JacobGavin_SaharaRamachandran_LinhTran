@@ -16,7 +16,11 @@ editor: visual
 
 In recent years, there has been a significant shift in the European Union's (EU) energy landscape, driven by efforts to reduce carbon emissions and transition towards more sustainable energy sources. The EU has increasingly focused on expanding renewable energy, such as wind, solar, and hydro, while gradually decreasing its reliance on fossil fuels. This shift is evident in the energy production data from 2016 to 2018, sourced from Eurostat, which tracks energy generation across various sources including conventional thermal, nuclear, hydro, wind, solar, and geothermal energy.
 
-Our project aims to explore these changes in the EU's energy production between 2016 and 2018, identifying key trends and understanding how the energy mix is evolving. Specifically, we focus on how the growth of renewable energy sources, such as wind and solar, has impacted the overall energy supply and the contributions of traditional energy sources. By analyzing this data, we aim to answer questions about the sustainability and resilience of the EU’s energy sector, the role of different energy sources in meeting demand, and the challenges and opportunities that lie ahead in the transition to cleaner energy.
+Our project aims to explore these changes in the EU's energy production between 2016 and 2018, identifying key trends and understanding how the energy mix is evolving. 
+
+Specifically, we focus on how the growth of renewable energy sources, such as wind and solar, has impacted the overall energy supply and the contributions of traditional energy sources.
+
+By analyzing this data, we aim to answer questions about the sustainability and resilience of the EU’s energy sector, the role of different energy sources in meeting demand, and the challenges and opportunities that lie ahead in the transition to cleaner energy.
 
 ## 2. Research Questions
 
@@ -28,7 +32,9 @@ Our project aims to explore these changes in the EU's energy production between 
 
 ## 3. Data Description and Provenance
 
-The dataset was sourced from Eurostat, the statistical office of the European Union, which collects and provides comprehensive and standardized data for EU member countries. Eurostat aims to support evidence-based policymaking and research across Europe. This dataset focuses on energy production trends, examining renewable and non-renewable energy sources, as well as cross-border energy flows.
+The dataset was sourced from Eurostat, the statistical office of the European Union, which collects and provides comprehensive and standardized data for EU member countries.
+
+Eurostat aims to support evidence-based policymaking and research across Europe. This dataset focuses on energy production trends, examining renewable and non-renewable energy sources, as well as cross-border energy flows.
 
 The dataset contains energy production data for European countries from 2016 to 2018, classified by energy sources such as wind, nuclear, solar, and thermal. It provides a basis for examining energy sustainability, shaping policy decisions, and understanding the transition to renewable energy.
 
@@ -44,18 +50,34 @@ Data Dictionary:
 
 -   net_production, imports, exports: Metrics on total production and cross-border energy flow
 
-The FAIR principles ensure that this dataset is Findable through its clear documentation and structured format from Eurostat. It is Accessible in open formats like .csv and .xlsx, ensuring compatibility with tools like R and Python. The use of standardized units (e.g., Gigawatt hours) and ISO country codes ensures Interoperability across platforms, while its consistent formatting and clear variable descriptions make it Reusable for various analysis, including energy sustainability research.
+The FAIR principles ensure that this dataset is Findable through its clear documentation and structured format from Eurostat. It is Accessible in open formats like .csv and .xlsx, ensuring compatibility with tools like R and Python. 
 
-The CARE principles emphasize Collective Benefit by supporting renewable energy policies that address climate change. Authority to Control is respected by following Eurostat’s guidelines on data use, ensuring ethical and responsible sharing. The dataset promotes Responsibility and Ethics by fostering transparency and sustainable energy practices, benefiting society as a whole.
+The use of standardized units (e.g., Gigawatt hours) and ISO country codes ensures Interoperability across platforms, while its consistent formatting and clear variable descriptions make it Reusable for various analysis, including energy sustainability research.
 
-To conclude this section, future data colleciton could include extending the dataset to include more recent years, or tracking other variables, such as greenhouse gas emissions. This would provide a more holistic view of which countries are "net zero" in terms of emissions. By integrating the data we might be able to gain a better insight into the effectiveness of renewable energy initiatives, and locate where countries need to improve their efforts. In addition, a comparitive analysis between EU and non-EU countries could also be useful in tracking how the continent as a whole is doing compared to other areas of the world.
+The CARE principles emphasize Collective Benefit by supporting renewable energy policies that address climate change. Authority to Control is respected by following Eurostat’s guidelines on data use, ensuring ethical and responsible sharing. 
+
+The dataset promotes Responsibility and Ethics by fostering transparency and sustainable energy practices, benefiting society as a whole.
+
+To conclude this section, future data colleciton could include extending the dataset to include more recent years, or tracking other variables, such as greenhouse gas emissions. 
+
+This would provide a more holistic view of which countries are "net zero" in terms of emissions. By integrating the data we might be able to gain a better insight into the effectiveness of renewable energy initiatives, and locate where countries need to improve their efforts. 
+
+In addition, a comparative analysis between EU and non-EU countries could also be useful in tracking how the continent as a whole is doing compared to other areas of the world.
 
 ## 4. Data Wrangling and Cleaning 
 
-To clean the data before it was ready for visualization, a few measures had to be taken, using `dplyr` and `stringr` packages in R. First, rows with a missing value in the 4th column were removed, as they were not suitable to be used for visualization. To make the countries easier to work with, a new column, "country" was created by removing all digits from the country codes, that way only the human readable part was left over. An additional check was performed, that will replace the value of "country" to NA if the length of the value was less than or equal to 1. Fills were then completed on rows without a country code, with the last non-NA value above it. Additionally, columns ...1, ...2, and ...14 through ...18 were removed from the data set, as they were considered extraneous.
+To clean the data before it was ready for visualization, a few measures had to be taken, using `dplyr` and `stringr` packages in R. 
+
+First, rows with a missing value in the 4th column were removed, as they were not suitable to be used for visualization. To make the countries easier to work with, a new column, "country" was created by removing all digits from the country codes, that way only the human readable part was left over. 
+
+An additional check was performed, that will replace the value of "country" to NA if the length of the value was less than or equal to 1. Fills were then completed on rows without a country code, with the last non-NA value above it. Additionally, columns ...1, ...2, and ...14 through ...18 were removed from the data set, as they were considered extraneous.
 
 
-Then, the first column is selected for more cleaning. Digits are removed, the substring "of which: " is removed, and periods (".") are removed, and extra whitespace is removed. The data is then stepped through by blocks of 34 rows, corresponding to the start and end rows for each country. columns 1,2, and 3 are converted into rows, and new column ranges are computed. The last two rows are then removed, and a stats list is appended to each row. `glue` is then used to create an excel-style range from the row and column bounds. The column names are set to years, and rows are more narrowly filtered.
+Then, the first column is selected for more cleaning. Digits are removed, the substring "of which: " is removed, and periods (".") are removed, and extra whitespace is removed. 
+
+The data is then stepped through by blocks of 34 rows, corresponding to the start and end rows for each country. columns 1,2, and 3 are converted into rows, and new column ranges are computed. 
+
+The last two rows are then removed, and a stats list is appended to each row. `glue` is then used to create an excel-style range from the row and column bounds. The column names are set to years, and rows are more narrowly filtered.
 
 The data was structured in a way that adhered to the TIDY principles covered in class, with one atomic record in a single row. this allowed analysis to be done
 
@@ -79,7 +101,11 @@ The original data set was composed of multiple tables, one for each country in t
 | Pump eng. Absorbed   | 4,014   | 3,859   | 3,391   | -3.9%     | -12.1%    |
 | Energy Supplied      | 338,005 | 334,340 | 333,092 | -1.1%     | -0.4%     |
 
-Given that this data is quite compartmentalized, it makes sense to move the data into a format that is more easy to operate on, which is how we ended up with the two new csv data sets.
+Given that this data is quite compartmentalized, it makes sense to move the data into a format that is more easy to operate on, which is how we ended up with the two new csv data sets. 
+
+Moving the data into multiple files allows us to manipulate it with more precision. Ensuring that when performing analysis, we do not have to sift through and filter rows that are not applicable to the research question that we are trying to answer. 
+
+Below are shown the heads of the two "new" csv files that were made from data derived from the original Excel file.
 
 
 Data set 1, (country_totals.csv)
@@ -90,6 +116,7 @@ head(data, n = 10)
 
 ```         
 
+
 Data set 2, (energy_types.csv)
 ```{R, echo=FALSE}
 
@@ -99,9 +126,45 @@ head(data, n=10)
 
 ## 5. Exploratory Data Analysis (EDA) 
 
+Below is Summary Statistics for Conventional Thermal Energy Production a for Energy Types produced in the years 2016, 2017, and 2018
+
+```{R, echo=FALSE}
+# Load necessary libraries
+library(knitr)
+library(dplyr)
+library(gt)
+
+# Read the data
+data <- read.csv("../data/energy_types.csv")
+
+# Filter for 'Conventional thermal' type (modify as needed for other energy types)
+filtered_data <- data %>% filter(type == "Conventional thermal")
+
+# Ensure column names are treated correctly
+colnames(filtered_data) <- make.names(colnames(filtered_data))
+
+# Compute summary statistics for each year individually
+summary_2016 <- summary(filtered_data$X2016, na.rm = TRUE)
+summary_2017 <- summary(filtered_data$X2017, na.rm = TRUE)
+summary_2018 <- summary(filtered_data$X2018, na.rm = TRUE)
+
+# Combine the summaries into a data frame
+summary_table <- data.frame(
+  Statistic = names(summary_2016),
+  Year_2016 = as.numeric(summary_2016),
+  Year_2017 = as.numeric(summary_2017),
+  Year_2018 = as.numeric(summary_2018)
+)
+
+# Print the summary table
+#kable(summary_table, caption = "Summary Statistics for Conventional Thermal Energy Production")
+print(summary_table)
+```
+
+This allows us to get a broad overview of what the landscape of energy production is like in the EU for the years specified.
 
 
-Below is a summary table for Total energy produced in the years 2016, 2017, and 2018
+In addition, below is a summary table for Total energy produced in the years 2016, 2017, and 2018
 
 ```{R, echo=FALSE}
 # Load necessary library
@@ -149,6 +212,9 @@ print(summary_table)
 #  )
 ```
 
+
+This is yet another summary table that will allow us to get an overview of what energy production looks like in the EU, however this data set does not concern itself necessarily with the TYPE of energy produced, rather the net production, imports, and exports of a given country. This data lends itself more to the economic factors surrounding energy production, compared to the previous summary table, which is grouped by TYPES of energy produced
+
 Below is a summary of the most lucrative methods of energy production in the EU from 2016-2018
 
 ![Energy Production Boxplot](../images/box_plot.png)
@@ -188,6 +254,9 @@ summary_table <- data %>%
 print(summary_table)
 ```
 
+
+
+Below is shown a table of the totals of the energy produced through the years 2016-2018
 | Type of Energy       | 2016 Total    | 2017 Total  | 2018 Total  |
 |----------------------|---------------|-------------|-------------|
 | Conventional Thermal | 1,801,451.654 | 1838783.375 | 1704429.420 |
@@ -199,7 +268,7 @@ print(summary_table)
 | Wind                 | 318,809.583   | 379,964.520 | 401,332.380 |
 | Other                | 5,670.308     | 5,692.438   | 8,109.144   |
 
-Provide an overview of the main insights you found from the data. Include multiple visualizations (e.g., graphs, tables, maps) to help explain the data. Ensure to include a table that summarizes key statistics, and at least one graph/plot. Explain each visualization in the narrative (e.g., what trends the graph shows, what the table tells us about the data). Optional: Create a map if it adds value to your analysis. 
+
 
 ## 6. Analysis of Research Questions 
 

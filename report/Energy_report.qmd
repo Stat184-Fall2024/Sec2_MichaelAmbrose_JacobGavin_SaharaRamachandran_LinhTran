@@ -3,7 +3,7 @@ title: "European Wind and Renewable Energy Trends (2016-2018)"
 
 subtitle: "Stat 184"
 
-author: "Jacob Gavin, Sahara Ramachandran, Linh Tran, Yuv Boghani"
+author: "Jacob Gavin, Sahana Ramachandran, Linh Tran, Yuv Boghani"
 
 
 format: pdf

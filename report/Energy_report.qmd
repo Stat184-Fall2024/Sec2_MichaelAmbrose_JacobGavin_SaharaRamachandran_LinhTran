@@ -221,6 +221,19 @@ If applicable, apply more advanced statistical methods (e.g., hypothesis testing
 
 Summarize the findings from your analysis. Answer each research question based on the results. Discuss any limitations in your analysis and suggest areas for future research or analysis. 
 
+The analysis of European energy production from 2016 to 2018 highlights a significant shift towards renewable energy, driven by the EU’s commitment to sustainability and reduced carbon emissions. While nuclear and thermal energy still dominate, wind energy production rose by 34.2% between 2016 and 2017 and another 13.8% from 2017 to 2018, illustrating rapid growth. Similarly, solar energy production increased by 10.7% and 11.6% year-over-year, showing consistent adoption. Major contributors like France and Germany, which accounted for significant portions of total production, underscore regional disparities, as smaller nations contribute far less. The findings underscore progress in renewable energy adoption while highlighting the importance of continued investment and policy support for a sustainable energy future.
+
+Research Questions:
+
+1.⁠ ⁠How have renewable energy trends evolved across European countries between 2016 and 2018?
+2.⁠ ⁠What factors contribute to the disparities in energy production across EU member states?
+
+Limitations:
+
+1.⁠ ⁠The analysis relies on Eurostat data, which may have reporting inconsistencies or gaps for certain countries.
+2.⁠ ⁠The study focuses on production data, leaving out consumption patterns or economic impacts of the energy transition.
+
+
 #### 1. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ?
 In 2018, total energy production varied substantially across European countries, largely depending on their resource availability, infrastructure, and policy focus. France, Germany, the United Kingdom, Italy, and Spain emerged as the top five energy producers, with France notably leading due to its extensive nuclear capacity and Germany following closely with a more diversified energy mix.
 

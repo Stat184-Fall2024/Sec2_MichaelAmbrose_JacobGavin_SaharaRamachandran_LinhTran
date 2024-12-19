@@ -205,12 +205,14 @@ If applicable, apply more advanced statistical methods (e.g., hypothesis testing
 Summarize the findings from your analysis. Answer each research question based on the results. Discuss any limitations in your analysis and suggest areas for future research or analysis. 
 
 #### 1. How does the total energy production vary across European countries in 2018? Which are the top 5 most produced ?
+In 2018, total energy production varied substantially across European countries, largely depending on their resource availability, infrastructure, and policy focus. France, Germany, the United Kingdom, Italy, and Spain emerged as the top five energy producers, with France notably leading due to its extensive nuclear capacity and Germany following closely with a more diversified energy mix.
 
 #### 2. What is the proportion of energy production for the European countries in 2018?
+The proportion of energy production was unevenly distributed, with a few large economies dominating the output. France held a significant share, followed by Germany, while other countries produced comparatively smaller proportions. Overall, a handful of major players accounted for the bulk of Europe’s total energy supply in 2018.
 
-#### 3. How have renewable energy trends changed over time (2016–2018) for European
+#### 3. How have renewable energy trends changed over time (2016–2018) for European countries?
+Between 2016 and 2018, renewable energy production in Europe increased steadily, with wind and solar sources experiencing particularly strong growth. Not only did the volume of renewable energy rise, but the rate of growth also accelerated over this period, reflecting the EU’s strengthening commitment to reducing fossil fuel dependence and achieving sustainability targets.
 
-countries?
 
 ## 9. References 
 

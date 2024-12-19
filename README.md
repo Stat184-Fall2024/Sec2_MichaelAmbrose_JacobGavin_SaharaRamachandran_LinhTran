@@ -57,20 +57,20 @@ We present the guidelines as a checklist in this README. This means that your te
     - [x] There should be narrative text helping readers to better understand what the visualization helps them to learn about the data and context.
   - [x] Your report should narrative text (beyond explaining tables and figures) that explains the context and helps the reader make sense of what is going on.
   - [x] __Optional:__ For those who want to challenge themselves further, feel free to include a section on using other statistical methods such as hypothesis testing, regression, ANOVA, or machine learning--see Chapter 18 of the Data Computing eBook.
-  - [ ]  You should properly cite any work you reference (including data) according to your choice of citation style. We've included files for APA7 and MLA9 as part of this template. If you want to use a different citation style, you will need download the CSL file from the [Zotero Style Respository](https://www.zotero.org/styles/) and include it in your team's repo.
+  - [x]  You should properly cite any work you reference (including data) according to your choice of citation style. We've included files for APA7 and MLA9 as part of this template. If you want to use a different citation style, you will need download the CSL file from the [Zotero Style Respository](https://www.zotero.org/styles/) and include it in your team's repo.
     - __Fail Safe:__ You can also put your citations as footnotes. 
 - [x] Use GitHub to share changes and edits; there should be multiple commits to your repo.
   - [x] Each team member must have at least two (2) commits in the repo's history.
   - [x] There should be at must be at least one Pull Request that resulted in a successful merging of two branches.
   - [x] One team member should create the Pull Request while a *different* team member should review and complete the Pull Request.
   - [x] Ensure that your instructor has access to your repo.
-  - [ ] __Optional:__ Use the repo's Issues system to track and address any problems, core tasks, etc. 
+  - [x] __Optional:__ Use the repo's Issues system to track and address any problems, core tasks, etc. 
 - [x] All code should be written according to a Style Guide of your choice. List this Style Guide as a code comment in your first code chunk.
   - __Possible Style Guides:__ There are several different coding Style Guides you can follow; here are a few. [The BOAST Style Guide](https://educationshinyappteam.github.io/Style_Guide/coding.html), [The Tidyverse Style Guide](https://style.tidyverse.org/), [Google's R Style Guide](https://google.github.io/styleguide/Rguide.html)
 - [x] Sign up for your Work-in-Progress Presentation
 - [x] Complete your Work-in-Progress Presentation (details below)
-- [ ] Finalize your work and submit your report as a __PDF__ to the appropriate submission portal in Canvas by the deadline.
-  - [ ] As a comment on your submission, include a link to your team's project repo.
+- [x] Finalize your work and submit your report as a __PDF__ to the appropriate submission portal in Canvas by the deadline.
+  - [x] As a comment on your submission, include a link to your team's project repo.
 - [ ] Each team member must complete their own copy of the Self & Peer Evaluations QMD file and upload the rendered file (HTML, PDF, or Word) to the appropriate submission portal in Canvas by the deadline.
 
 ## Work-in-Progress Presentations

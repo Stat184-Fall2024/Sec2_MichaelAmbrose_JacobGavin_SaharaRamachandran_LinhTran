@@ -396,13 +396,10 @@ Between 2016 and 2018, renewable energy production in Europe increased steadily,
 
 ## 9. References 
 
-<https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Archive:Electricity_generation_statistics_%E2%80%93_first_results>
+European Commission. (n.d.). Electricity generation statistics – first results. Eurostat Statistics Explained. Retrieved December 18, 2024, from  <https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Archive:Electricity_generation_statistics_%E2%80%93_first_results>
+For the GitHub repository: Ford, R. (2020, August 4). TidyTuesday dataset: Renewable energy. GitHub. Retrieved December 18, 2024, from <https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-08-04/Electricity_generation_statistics_2019.xlsx>
 
-<https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-08-04/Electricity_generation_statistics_2019.xlsx>
 
-<https://github.com/rfordatascience/tidytuesday/blob/main/data/2020/2020-08-04/readme.md>
-
-Cite any sources used in your report (data, articles, books) following your chosen citation style (e.g., APA7, MLA9). If you are using data from an external source like Eurostat or OECD, make sure to properly cite these sources. 
 
 ## 10. Appendix: Code 
 

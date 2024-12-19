@@ -34,14 +34,15 @@ challenges and opportunities that lie ahead in the transition to cleaner energy.
 
 ## 2. Research Questions
 
-1\. How does the total energy production vary across European countries in 2018?
-Which are the top 5 most produced ? (Bar chart)
+1\. How much do the two sources of energy (renewable and non-renewable) contribute to net production in the EU across 2016-18?
 
-2\. What is the proportion of energy production for the European countries in 
-2018? (Pie chart)
+2\. What are the trends and variations in energy production among different renewable sources over 2016-18?
 
-3\. How have renewable energy trends changed over time (2016–2018) for European 
-countries? (Line chart)
+3\. What are the net trade balances for different countries in the EU as of 2018, and how do they compare geographically?
+
+4\. Which EU countries are ranked in the top 5 for the highest and lowest renewable energy production in 2018, and what are their key sources?
+
+5\.  How did the total renewable energy production and imports impact an EU country's net trade balance in 2018?
 
 ## 3. Data Description and Provenance
 
@@ -83,9 +84,9 @@ Then, the first column is selected for more cleaning. Digits are removed, the su
 The data was structured in a way that adhered to the TIDY principles covered in
 class, with one atomic record in a single row. this allowed analysis to be done
 
-```         
-Explain any data wrangling or cleaning you had to do before performing the analysis (e.g., handling missing values, reformatting data). Briefly describe the tools used (e.g., R, Python, etc.) and methods used to clean the data.
-```
+      
+
+
 
 ## 5. Exploratory Data Analysis (EDA) 
 
@@ -144,13 +145,12 @@ print(summary_table)
 | Wind                  | 318,809.583     | 379,964.520   | 401,332.380 |
 | Other                 | 5,670.308       | 5,692.438     | 8,109.144   |
 
-Provide an overview of the main insights you found from the data. Include multiple visualizations (e.g., graphs, tables, maps) to help explain the data. Ensure to include a table that summarizes key statistics, and at least one graph/plot. Explain each visualization in the narrative (e.g., what trends the graph shows, what the table tells us about the data). Optional: Create a map if it adds value to your analysis. 
+
 
 ## 6. Analysis of Research Questions 
 
 
-
-#### 1. How much do the two sources of energy contribute to net production in the EU across 2016-18?
+#### 1. How much do the two sources of energy (renewable and non-renewable) contribute to net production in the EU across 2016-18?
 
 ![Energy Production by Category and Year](../images/energy_category_years.png)
 
@@ -195,7 +195,33 @@ European countries, including Italy, appear to be more dependent on imports. Thi
 production and consumption. These insights underline the interdependence among EU countries in renewable energy trade and indicate the
 collaborative energy strategies used to balance production and consumption.
 
-Discuss how your data addresses each research question. Analyze the results with the help of the visualizations and any relevant statistics. Use narrative text to provide context and explain what the visualizations reveal about the data. 
+####4. Which EU countries are ranked in the top 5 for the highest and lowest renewable energy production in 2018, and what are their key sources?
+
+![Top 5- Highest Production](../images/top_5.png)
+![Top 5- Lowest Production](../images/bottom_5.png)
+
+The graphs show the inconsistency in renewable energy production among EU countries in 2018. The bar chart for the top 5 
+countries with the highest renewable energy production shows that Norway dominates with the largest share, primarily driven 
+by hydro energy, followed by Germany, where wind energy contributes the most. Other mentions include France, Spain, and Italy,
+with a mix of hydro, solar, and wind energy sources. Conversely, the chart for the lowest producers shows that Malta, Luxembourg,
+Hungary, Estonia, and Cyprus generated minimal renewable energy. These countries relied primarily on hydro and wind, with very 
+little contribution from solar or geothermal sources. The stark discrepancies between the highest and lowest producers underlines 
+the geographic and infrastructural variations in renewable energy potential and adoption. Countries like Norway and Germany 
+leverage their natural resources and advanced infrastructure to lead in production, whereas smaller nations like Malta and 
+Luxembourg face challenges due to limited resources or geographical constraints. These findings further emphasize the need for 
+regional cooperation to bridge the renewable energy gap across the EU.
+
+####5. How did the total renewable energy production and imports impact an EU country's net trade balance in 2018?
+
+![Net Trade balance vs Total Production](../images/corr_net_trade_energy.png)
+![Net Trade Balance vs Imports](../images/corr_net_trade_imports.png)
+
+The first scatterplot illustrates a positive correlation of 0.385 between net trade balance and total renewable energy production in 2018. As the production increases, net trade balances also tend to rise, as indicated by the upward-sloping trendline. This suggests that countries with higher renewable energy production are better positioned to generate surplus, or being less reliant on imports, ultimately contributing to a stronger trade balance.  However, the variability in data points indicates that other factors, such as domestic consumption and export policies, also influence net trade balance.
+The second scatterplot examines the relationship between net trade balance and imports, showing a negative correlation of -259l. The downward-sloping trendline indicates that higher energy imports are associated with lower or negative net trade balances. This pattern highlights the economic disadvantage of reliance on imports, as it exacerbates a country’s trade deficit.
+These visualizations emphasize both the critical role of renewable energy production in bolstering trade balance and the economic challenges posed by energy import dependency. They highlight the importance of policies promoting renewable energy production to enhance trade stability and reduce reliance on external energy sources.
+
+
+
 
 ## 7. Additional Analysis (Optional) 
 

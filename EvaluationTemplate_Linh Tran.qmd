@@ -1,0 +1,206 @@
+---
+title: "Self & Peer Evaluations"
+subtitle: "Stat 184 Final Project"
+author: "Linh Tran"
+date: now
+format: pdf
+---
+
+```{=html}
+<!--Directions
+Use this RMD template to complete peer and self evaluations for your final project. Be sure to answer all prompts for each team member and yourself. You'll upload the knitted PDF (not the RMD) to the appropriate Canvas Portal.
+--->
+```
+# Team Member 1
+
+## Who are you evaluating? Self-evaluation
+
+## Evaluation Areas
+
+#### 1. Intellectual Contributions.
+
+*Understanding the project, doing the research, evaluating and interpreting data, creative efforts and problem solving insight, providing intellectual leadership for group.*
+
+Score (out of 10): 10
+
+Justification/Examples: Although our group started late, I contributed significantly from the beginning. I proposed the central idea for the project and sourced a key dataset that was crucial for our analysis. I also wrote half of the introduction, covering essential topics like fairness and care, which helped guide the team’s direction. In addition to my research and writing, I took the lead on cleaning and preparing the dataset, ensuring the data was ready for analysis. I created several visualizations based on the data, which were included in our presentation to help clearly communicate our findings. During the presentation, I presented these visualizations and explained the data insights to the team and audience. Overall, my efforts in both data preparation and presentation played a significant role in keeping the project on track and ensuring we delivered a high-quality final product.
+
+#### 2. Team Support.
+
+*Enthusiasm, commitment to project, cooperation, respect for other persons’ ideas, willingness to compromise as appropriate, receptiveness to constructive feedback.*
+
+Score (out of 10): 10
+
+Justification/Examples: I was committed to keeping the team organized and on track, especially since one member was working remotely. I set up a shared Teams space to upload updates and documents, ensuring everyone stayed informed. I consistently met deadlines and respected others’ ideas, offering constructive feedback, such as suggesting we include "before" and "after" screenshots in the data cleaning section of the presentation. I also helped divide the tasks among the team to make sure everyone had a clear role and contributed equally to the project.
+
+#### 3. Communication Contributions.
+
+*Effectiveness of communication within team, quality of written work, contributions toward creation of presentation and other written work.*
+
+Score (out of 10): 10
+
+Justification/Examples: I kept the team informed by regularly updating them on my progress and scheduling meeting times. I contributed to the report by writing the introduction, describing the data, and discussing fairness and care. For the presentation, I created data visualizations and shared key insights, ensuring that the slides clearly communicated our findings. My updates and contributions helped keep the project on track and the presentation engaging.
+
+#### 4. Time Contributions.
+
+*Keeping team on task, meeting deadlines, following through on plans, attendance at team meetings, does equal share of work.*
+
+Score (out of 10): 10
+
+Justification/Examples: I consistently kept the team on track by providing regular updates on our progress through Teams, ensuring everyone was informed. I met all deadlines for my tasks and never missed a meeting. I also contributed equally to the project, particularly in coding, where I made sure my work was thorough and aligned with the team’s objectives. My punctuality and commitment helped ensure the project stayed on schedule.
+
+#### 5. Overall / Other Contributions
+
+*Score any additional contributions, general remarks, or overall impression of this person as a member of the group.*
+
+Score (out of 10): 10
+
+Justification/Examples: Overall, I believe my contributions were vital to the success of the project. In addition to my core responsibilities, I took the initiative to help with project organization, ensuring that tasks were divided effectively and that everyone knew their roles. I was always available to support my teammates, whether it was offering feedback, clarifying concepts, or helping troubleshoot issues. My proactive approach and willingness to take on various tasks beyond my own responsibilities helped create a positive and collaborative team environment. I consistently demonstrated leadership, communication, and problem-solving skills, which made me a valuable team member throughout the project.
+
+### Total Score (out of 50): 50
+
+# Team Member 2
+
+## Who are you evaluating? Jacob Gavin
+
+## Evaluation Areas
+
+#### 1. Intellectual Contributions.
+
+*Understanding the project, doing the research, evaluating and interpreting data, creative efforts and problem solving insight, providing intellectual leadership for group.*
+
+Score (out of 10): 9
+
+Justification/Examples: Jacob demonstrated a strong understanding of the project from the start. He took the time to thoroughly read through the project brief and conducted research on the dataset, which was critical for our analysis. One of his key contributions was creating a summary table of the dataset, which helped the team better understand its structure and key features. His ability to evaluate and interpret the data was crucial in guiding our approach. Jacob also contributed creative insights, suggesting new angles for our analysis and helping solve some of the challenges we faced. His intellectual contributions, combined with his ability to communicate complex ideas clearly, were vital to the success of the group.
+
+#### 2. Team Support.
+
+*Enthusiasm, commitment to project, cooperation, respect for other persons’ ideas, willingness to compromise as appropriate, receptiveness to constructive feedback.*
+
+Score (out of 10): 10
+
+Justification/Examples: Jacob showed exceptional commitment to the project, actively seeking input from the team and incorporating feedback into the report. He was always willing to help, even with technical issues—like when I had trouble merging branches in GitHub, he stepped in and guided me through the process. His positive attitude, willingness to support teammates, and strong teamwork made him a key contributor to the project’s success.
+
+#### 3. Communication Contributions.
+
+*Effectiveness of communication within team, quality of written work, contributions toward creation of presentation and other written work.*
+
+Score (out of 10): 9
+
+Justification/Examples: Jacob was effective in communicating with the team throughout the project. He regularly kept the group updated on his progress and made sure everyone was aligned on tasks. He contributed to the report, particularly in the sections related to exploratory data analysis (EDA) and the summary table, providing clear and detailed explanations. Additionally, Jacob played an important role in the presentation, ensuring that key points were communicated effectively. His contributions to both written and oral communication helped ensure clarity and coherence across the project.
+
+#### 4. Time Contributions.
+
+*Keeping team on task, meeting deadlines, following through on plans, attendance at team meetings, does equal share of work.*
+
+Score (out of 10): 10
+
+Justification/Examples: Jacob consistently met deadlines and contributed his fair share of work throughout the project. He was always punctual and attended every team meeting, ensuring that the project stayed on track. He followed through on plans, completing his tasks on time and keeping the team aligned with our goals. His strong time management and dedication to meeting deadlines were key factors in our success.
+
+#### 5. Overall / Other Contributions
+
+*Score any additional contributions, general remarks, or overall impression of this person as a member of the group.*
+
+Score (out of 10): 10
+
+Justification/Examples: Jacob has been an outstanding member of the team. He excelled in handling technical issues, particularly with managing the GitHub repository, ensuring smooth collaboration. He consistently brought valuable insights to meetings and was always ready to share his opinions, helping to guide discussions in a productive direction. Additionally, Jacob contributed well to the written report, providing clear and effective writing, especially in technical sections. His overall contributions, both technical and collaborative, were crucial to the success of the project.
+
+### Total Score (out of 50): 48
+
+# Team Member 3
+
+## Who are you evaluating? Sahana Ramachandran
+
+## Evaluation Areas
+
+#### 1. Intellectual Contributions.
+
+*Understanding the project, doing the research, evaluating and interpreting data, creative efforts and problem solving insight, providing intellectual leadership for group.*
+
+Score (out of 10): 8
+
+Justification/Examples:Sahana showed a good understanding of the project and contributed through her research on the data background. She played a key role in researching for the presentation and helped make the findings clearer for the team. While she didn't lead the intellectual direction, her contributions in refining ideas, interpreting data, and supporting the presentation were valuable to the overall success of the project.
+
+#### 2. Team Support.
+
+*Enthusiasm, commitment to project, cooperation, respect for other persons’ ideas, willingness to compromise as appropriate, receptiveness to constructive feedback.*
+
+Score (out of 10): 9
+
+Justification/Examples: Sahana was committed to the project and consistently worked well with the team. She was cooperative and always respectful of others' ideas, contributing positively to group discussions. She was open to feedback and willing to make adjustments when needed. Her enthusiasm for the project was clear, and she played an important role in keeping the team engaged and motivated throughout. Overall, her teamwork and collaborative attitude were a valuable asset to the group.
+
+#### 3. Communication Contributions.
+
+*Effectiveness of communication within team, quality of written work, contributions toward creation of presentation and other written work.*
+
+Score (out of 10): 10
+
+Justification/Examples: Sahana communicated effectively with the entire team, keeping the remote member updated on project progress. She contributed to the analysis in the report and played a key role in creating the presentation, ensuring both were of high quality. Her clear communication helped keep the team aligned and on track throughout the project.
+
+#### 4. Time Contributions.
+
+*Keeping team on task, meeting deadlines, following through on plans, attendance at team meetings, does equal share of work.*
+
+Score (out of 10): 9
+
+Justification/Examples: Sahana followed the project plan and met most of the deadlines. While she occasionally faced conflicts with exams, she managed her time well and contributed her fair share of work. Although she couldn’t attend every meeting, she was present for the majority and stayed on top of her tasks. Her ability to balance commitments and maintain strong contributions was essential to the team’s progress.
+
+#### 5. Overall / Other Contributions
+
+*Score any additional contributions, general remarks, or overall impression of this person as a member of the group.*
+
+Score (out of 10): 9
+
+Justification/Examples: Sahana was a dedicated and valuable member of the team. She contributed positively in all areas, from research to report writing and presentation preparation. She was proactive in communication and worked well with the team, especially when it came to managing her tasks despite occasional conflicts with exams. Overall, Sahana’s contributions were key to the project’s success, and she consistently demonstrated strong teamwork, commitment, and quality work throughout the process.
+
+### Total Score (out of 50): 45
+
+# Team Member 4
+
+## Who are you evaluating? Yuv Boghani
+
+*Full name of team member you are evaluating, or say "self-evaluation"*
+
+## Evaluation Areas
+
+#### 1. Intellectual Contributions.
+
+*Understanding the project, doing the research, evaluating and interpreting data, creative efforts and problem solving insight, providing intellectual leadership for group.*
+
+Score (out of 10): 7
+
+Justification/Examples: While working remotely, Yuv made a solid effort to understand the project. He read through the materials enough to contribute to writing the report, but his involvement in the research and data analysis was more limited compared to other team members. He was able to grasp the core concepts and support the team in completing the report, but didn't take a leading role in intellectual direction or problem-solving. Overall, his contributions were sufficient but not as extensive as others.
+
+#### 2. Team Support.
+
+*Enthusiasm, commitment to project, cooperation, respect for other persons’ ideas, willingness to compromise as appropriate, receptiveness to constructive feedback.*
+
+Score (out of 10): 7
+
+Justification/Examples: Yuv was committed to the project, mainly contributing to the conclusion of the report. Due to time zone conflicts, we didn’t have many opportunities to meet, so his involvement in team discussions and feedback was limited. While cooperative and respectful of others’ ideas, his overall engagement in providing feedback was not as frequent.
+
+#### 3. Communication Contributions.
+
+*Effectiveness of communication within team, quality of written work, contributions toward creation of presentation and other written work.*
+
+Score (out of 10): 8
+
+Justification/Examples: Yuv communicated with the team, though his participation was limited. His written contributions to the report were of medium quality, and he didn’t play a significant role in the presentation. While he did contribute when needed, there was room for more consistent communication and involvement in both discussions and written work.
+
+#### 4. Time Contributions.
+
+*Keeping team on task, meeting deadlines, following through on plans, attendance at team meetings, does equal share of work.*
+
+Score (out of 10): 8
+
+Justification/Examples: Yuv met deadlines and completed his assigned tasks on time. Although his share of work was limited, he followed through and ensured his contributions were finished as required. His attendance at meetings was good, but overall involvement could have been more substantial.
+
+#### 5. Overall / Other Contributions
+
+*Score any additional contributions, general remarks, or overall impression of this person as a member of the group.*
+
+Score (out of 10): 8
+
+Justification/Examples: His contributions were primarily limited to the conclusion section of the report, and his overall involvement in the project was minimal. He made two commits on GitHub, meeting the basic requirements, but did not make a significant impression beyond this. While he fulfilled his responsibilities, his level of commitment and contribution could have been more substantial.
+
+### Total Score (out of 50): 38

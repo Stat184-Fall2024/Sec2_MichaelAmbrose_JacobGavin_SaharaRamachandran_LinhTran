@@ -71,7 +71,7 @@ We present the guidelines as a checklist in this README. This means that your te
 - [x] Complete your Work-in-Progress Presentation (details below)
 - [x] Finalize your work and submit your report as a __PDF__ to the appropriate submission portal in Canvas by the deadline.
   - [x] As a comment on your submission, include a link to your team's project repo.
-- [ ] Each team member must complete their own copy of the Self & Peer Evaluations QMD file and upload the rendered file (HTML, PDF, or Word) to the appropriate submission portal in Canvas by the deadline.
+- [x] Each team member must complete their own copy of the Self & Peer Evaluations QMD file and upload the rendered file (HTML, PDF, or Word) to the appropriate submission portal in Canvas by the deadline.
 
 ## Work-in-Progress Presentations
 
